@@ -1,0 +1,103 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body {
+  background-color: #131313;
+  font-family: Arial, Helvetica, sans-serif;
+}
+::after, :before {
+  content: " ";
+  display: inline-block;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 35px;
+  text-transform: capitalize;
+  position: absolute;
+  top: -10%;
+  left: 2%;
+  z-index: 99;
+  transition: all .3s .1s ease-in-out
+}
+.cards {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100vh;
+  flex-wrap: wrap;
+}
+.cards > div {
+  width: 300px;
+  height: 330px;
+  overflow: hidden;
+  border-radius: 15px;
+  position: relative;
+}
+.cards div:first-child::before {
+  content: "gon";
+}
+.cards div:first-child:hover::before {
+  content: "gon";
+  top: 2%;
+}
+.cards div:first-child::after {
+  content: "hunter x hunter anime";
+  top: 100%;
+  left: 2%;
+}
+.cards div:first-child:hover::after {
+  content: "hunter x hunter anime";
+  top: 75%;
+}
+
+.cards div:nth-child(2)::before {
+  content: "gon 2";
+}
+.cards div:nth-child(2):hover::before {
+  content: "gon 2";
+  top: 2%;
+}
+.cards div:nth-child(2)::after {
+  content: "hunter x hunter s2 anime";
+  top: 100%;
+  left: 2%;
+}
+.cards div:nth-child(2):hover::after {
+  content: "hunter x hunter s2 anime";
+  top: 75%;
+}
+
+.cards div img {
+  width: 300px;
+  height: 330px;
+  filter: grayscale(100%);
+  transition: all .4s .1s ease-in-out;
+}
+img:hover {
+  transform: scale(2.6) translateX(60px);
+}
+
+span {
+  display: inline-block;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: 2px solid #131313;
+  border-radius: 50%;
+  top: 40%;
+  left: -10%;
+  z-index: 9999;
+  transition: all .5s .1s ease-in-out;
+}
+span:nth-child(2) {
+  margin-top: 30px;
+  transition-delay: .3s;
+}
+span:nth-child(3){
+  margin-top: 60px;
+  transition-delay: .6s;
+}
+.cards div:hover span {
+  left: 2%;
+}
